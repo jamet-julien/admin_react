@@ -1,0 +1,11 @@
+#app{
+  margin : 0;
+  height : 100%;
+
+  .container{
+    display        : flex;
+    flex-direction : column;
+    flex           : 1 auto;
+    height         : 100%;
+  }
+}

@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Acxiom</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="<?= HTTP_ROOT;?>/static/img/favicon.png">
+    <link rel="stylesheet" href="<?= HTTP_ROOT;?>/build/css/styles.css">
+  </head>
+  <body class="<?php echo $sCtrl ;?>Page version_1">
+
+<?php
+
+    foreach ( $aView as $sPath) {
+      require_once( __DIR__ . '/../..' .$sPath);
+    }
+
+?>
+  <script>
+
+    var SETTING = {
+        root : '<?= PATH_ROOT;?>admin'
+    };
+  
+  </script>
+  <script src="<?= HTTP_ROOT;?>/build/js/main.js" charset="utf-8"></script>
+  </body>
+</html>

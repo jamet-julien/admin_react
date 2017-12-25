@@ -1,0 +1,13 @@
+
+
+.search{
+    width : 100%;
+
+    &Input{
+      width      : 100%;
+      padding    : 10px;
+      background : $greyLight;
+      border     : none;
+      outline    : none;
+    }
+}

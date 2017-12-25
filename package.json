@@ -1,0 +1,53 @@
+{
+  "name": "acxiom",
+  "version": "0.0.1",
+  "description": "parti front end",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.13.0",
+    "babel-regenerator-runtime": "^6.5.0",
+    "css-mqpacker": "^4.0.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-cssbeautify": "^0.1.3",
+    "gulp-csscomb": "^3.0.7",
+    "gulp-livereload": "^3.8.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-styledown": "0.0.2",
+    "gulp-watch": "^4.3.5",
+    "json-loader": "^0.5.4",
+    "pixrem": "^3.0.0",
+    "postcss-at2x": "^2.0.0",
+    "postcss-color-function": "^2.0.1",
+    "postcss-flexibility": "^2.0.0",
+    "postcss-responsive-font": "^1.0.3",
+    "postcss-short-position": "^1.0.0",
+    "precss": "^1.4.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "webpack": "^1.13.1"
+  },
+  "dependencies": {
+    "diacritics": "^1.3.0",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-uglify": "^3.0.0",
+    "postcss-for-var": "^1.0.3"
+  }
+}

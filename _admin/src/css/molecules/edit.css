@@ -1,0 +1,60 @@
+
+
+.edit{
+
+  border        : none;
+  padding       : 0;
+  width         : 94%;
+  margin        : 0 auto;
+  margin-bottom : 20px;
+
+  &.editright{
+    text-align : right;
+  }
+
+  &Label{
+    font-size : 3rem;
+    display   : block;
+  }
+
+  &Input, &Textarea{
+    width      : 100%;
+    padding    : 10px;
+    border     : none;
+    outline    : 0;
+    display    : block;
+    margin     : 0;
+    box-sizing : border-box;
+  }
+
+  &Textarea{
+    height : 400px;
+    resize : none;
+  }
+
+  &Preview{
+    margin : auto;
+    width  : auto;
+    height : 200px;
+  }
+
+  &Button{
+    background-color : $blueLight;
+    color            : $white;
+    border           : none;
+    outline          : 0;
+    border-radius    : 0;
+    font-size        : 2rem;
+    text-align       : center;
+    padding          : 10px 20px;
+    display          : inline-block;
+    cursor           : pointer;
+
+    &[disabled]{
+      cursor           : no-drop;
+      background-color : $greyLight;
+    }
+
+  }
+
+}

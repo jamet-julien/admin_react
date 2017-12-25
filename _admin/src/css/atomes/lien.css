@@ -1,0 +1,31 @@
+
+
+.lien{
+  text-decoration : none;
+  color           : inherit;
+
+  &.selected{
+    color : $blueLight;
+    text-decoration : underline;
+  }
+
+  &Delete{
+    color            : #fff;
+    background-color : rgba(185,83,63,.9);
+    margin-left      : 20px;
+    padding          : 8px 21px;
+    border-radius    : 20px;
+    font-size        : 1.5rem;
+    display          : inline-block;
+    margin-bottom    : 12px;
+    transition       : all .3s;
+    cursor           : pointer;
+
+    &:hover{
+      
+      background-color : rgba(185,83,63,.4);
+      
+    }
+  }
+
+}

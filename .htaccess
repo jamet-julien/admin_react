@@ -1,0 +1,42 @@
+#--------------------------------------------------
+# SYSTEM
+#--------------------------------------------------
+# AddType image/x-icon favicon.ico
+# php_value date.timezone "Europe/Paris"
+# php_value output_handler ob_gzhandler
+
+
+#--------------------------------------------------
+# REWRITE
+#--------------------------------------------------
+# Options +FollowSymlinks
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+
+	RewriteRule ^([_a-z0-9_\-\/]*)\.json$ _api/api.php?query=$1&display=$2 [QSA,NC,L]
+
+	# admin
+	RewriteRule ^(?!_)admin\/([_a-z0-9_\-\/]*)\.(.[^html]*)$ _admin/$1.$2 [QSA,NC,L]
+	
+	RewriteRule ^_admin\/([_a-z0-9_\-\/]*)\.(.[^html]*)$ _admin/$1.$2 [QSA,NC,L]
+
+	# RewriteRule ^admin\/([_a-z0-9_\-\/]*)\.(html)$ _admin/index.php?query=$1&display=$2 [QSA,NC,L]
+	RewriteRule ^admin\/([_a-z0-9_\-\/]*)$ _admin/index.php [QSA,NC,L]
+
+	# public
+	RewriteRule ^(?!_public\/)([_a-zA-Z0-9_\-\/]*)\.(.[^html]*)$ _public/$1.$2 [QSA,NC,L]
+	RewriteRule ^([_a-z0-9_\-\/]*)\.(html)$ _public/index.php?query=$1&display=$2 [QSA,NC,L]
+	RewriteRule ^([_a-z0-9_\-\/]*)$ _public/index.php?query=$1 [QSA,NC,L]
+
+</IfModule>
+
+<IfModule mod_headers.c>
+
+	<FilesMatch "fichier.html\?=(.*)">
+	Header set Cache-Control "max-age=2592000, public"
+	</FilesMatch>
+
+</IfModule>
